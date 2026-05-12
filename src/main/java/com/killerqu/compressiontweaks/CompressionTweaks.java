@@ -6,6 +6,7 @@ import com.killerqu.compressiontweaks.biomes.CTSurfaceRuleData;
 import com.killerqu.compressiontweaks.config.CTClientConfig;
 import com.killerqu.compressiontweaks.config.CTCommonConfig;
 import com.killerqu.compressiontweaks.recipe.CTRecipeTypes;
+import com.killerqu.compressiontweaks.recipe.SmithingEnchantRecipe;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -15,6 +16,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.data.event.GatherDataEvent;
@@ -70,6 +72,8 @@ public class CompressionTweaks {
         });
     }
 
+    //This is used by the EMI integration for MiningMaster's gem smithing.
+    public record SmithingEnchant (Enchantment ench, SmithingEnchantRecipe recipe) {}
 
     public static class EventHandler {
         @SubscribeEvent
