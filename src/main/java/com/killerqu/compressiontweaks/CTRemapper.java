@@ -848,6 +848,7 @@ public class CTRemapper {
         bwgRemaps.put("byg:boric_campfire", "minecraft:campfire");
         bwgRemaps.put("byg:cryptic_campfire", "minecraft:campfire");
         bwgDirectRemap("overgrown_stone");
+        bwgDirectRemap("shelf_fungi");
 
         REMAPS.put("byg", bwgRemaps);
 
