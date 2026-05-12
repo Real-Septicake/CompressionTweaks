@@ -140,6 +140,7 @@ repositories {
     maven {
         url = "https://maven.blamejared.com/"
     }
+    maven { url = "https://maven.createmod.net" }
     maven {
         name "Modmaven"
         url "https://modmaven.dev/"
